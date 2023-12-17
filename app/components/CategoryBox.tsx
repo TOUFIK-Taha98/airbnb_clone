@@ -4,7 +4,9 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback } from "react";
 import { IconType } from "react-icons";
 import queryString from "query-string";
-
+// 3:11:38
+// https://www.youtube.com/watch?v=c_-b_isI4vg
+// https://github.com/AntonioErdeljac/next13-airbnb-clone/tree/master
 interface CategoryBoxProps {
   icon: IconType;
   label: string;
