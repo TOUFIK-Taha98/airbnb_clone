@@ -1,12 +1,14 @@
 import EmptyState from "../components/EmtyState";
-import ClientOnly from "../components/ClientOnly";
+import ClientOnly from "@/app/components/ClientOnly";
 
-import getCurrentUser from "../actions/getCurrentUser";
-import getReservations from "../actions/getReservations";
+import getCurrentUser from "@/app/actions/getCurrentUser";
+import getReservations from "@/app/actions/getReservations";
+
 import TripsClient from "./TripsClient";
 
 const TripsPage = async () => {
-  const currentUser = getCurrentUser();
+  const currentUser = await getCurrentUser();
+
   if (!currentUser) {
     return (
       <ClientOnly>
@@ -15,9 +17,7 @@ const TripsPage = async () => {
     );
   }
 
-  const reservations = await getReservations({
-    userId: currentUser.id,
-  });
+  const reservations = await getReservations({ userId: currentUser.id });
 
   if (reservations.length === 0) {
     return (
