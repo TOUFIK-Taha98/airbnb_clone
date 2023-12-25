@@ -17,7 +17,7 @@ This is a full-stack Airbnb clone built with Next.js 13. It includes features su
 
 ## Demo
 
-For a live demo, you can visit [Demo Link](https://your-demo-link.com).
+For a live demo, you can visit [Demo Link](https://project-clone-nine.vercel.app/).
 
 ## Installation
 
